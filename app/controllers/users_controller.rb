@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :check_if_logged_in #need to add what user can do
+  before_action :check_if_logged_in #need to add what user can do
   # before_action :check_if_admin #need to add what admin can do
 
   def index

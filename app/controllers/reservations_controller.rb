@@ -1,5 +1,10 @@
 class ReservationsController < ApplicationController
+  before_action :check_if_logged_in
+
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+
+  def home
+  end
 
   # GET /reservations
   # GET /reservations.json
