@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/search' => 'reservations#home', :as => 'reservationhome'
+
   resources :reservations
   resources :flights
   resources :airplanes
