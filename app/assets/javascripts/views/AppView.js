@@ -7,7 +7,6 @@ app.AppView = Backbone.View.extend({
     this.$el.text($('#testing').text());
     //to render the other views - will go inside this function also
 
-    var reservationView = new app.ReservationView();
-    reservationView.render();
+    
   },
 });
