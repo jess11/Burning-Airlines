@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_if_logged_in #need to add what user can do
+  # before_action :check_if_logged_in #need to add what user can do
   # before_action :check_if_admin #need to add what admin can do
 
   def index
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save  #checking for validity
       session[:user_id] = @user.id #signing up also signs you in
-      redirect_to root_path
+      redirect_to reservationhome_path
     else
       render :new
     end
