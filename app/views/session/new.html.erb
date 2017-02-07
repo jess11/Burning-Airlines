@@ -1,4 +1,4 @@
-<%<h1>Sign In</h1>
+<h1>Sign In</h1>
 
 <% if flash[:error].present? %>
   <p><%= flash[:error] %></p>
@@ -6,7 +6,7 @@
 
 <%= form_tag login_path do%>
   <%= label_tag 'Username' %>
-  <%= email_field_tag :username %>
+  <%= text_field_tag :username %>
 
   <%= label_tag 'Password' %>
   <%= password_field_tag :password %>

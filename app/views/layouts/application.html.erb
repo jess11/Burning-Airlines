@@ -17,8 +17,8 @@
       <% end %>
 
 
-      <%= link_to "Edit Profile", users_edit_path %>
-      <%= link_to "Logout #{@current_user.email}", login_path, :method => 'delete' %>
+
+      <%= link_to "Logout #{@current_user.username}", login_path, :method => 'delete' %>
     <% else %>
       <%= link_to "Sign up", new_user_path %>
       <%= link_to "Sign in", login_path %>
