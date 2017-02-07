@@ -1,15 +1,33 @@
+
+
 <p>this is where our single page app will live</p>
 
 <div id="main">
-  <p id="testing">hello??</p>
 
 </div>
 
-<script id="search" type="text/template">
 
+<script type="javascript">
+var app = app || {};
+app.GlobalUser = <%= @current_user.id %>
+//Need to fix : geting session user's id (not working)
 </script>
 
-<script id="results" type="text/template">
+<script type = "text/template" id= "appView">
+  <h1>Search Reservations</h1>
+  <div id="search">
+  </div>
+  <ul id="results"></ul>
+</script>
+
+
+<script id="searchView" type="text/template">
+  <textarea autofocus placeholder="Origin" id="origin"></textarea>
+  <textarea autofocus placeholder="Destination" id="destination"></textarea>
+  <button>Search</button>
+</script>
+
+<script id="resultsView" type="text/template">
 
 </script>
 
