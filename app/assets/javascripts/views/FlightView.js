@@ -15,6 +15,8 @@ app.FlightView = Backbone.View.extend({
 
     $('#main').html('');
     $('#main').append(str);
+    var view = new app.SeatingView({model: this.model});
+    view.render();
     //append picture to #main
 
 
