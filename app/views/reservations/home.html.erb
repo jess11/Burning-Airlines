@@ -7,10 +7,8 @@
 </div>
 
 
-<script type="javascript">
-var app = app || {};
+<script type="text/javascript">
 app.GlobalUser = <%= @current_user.id %>
-//Need to fix : geting session user's id (not working)
 </script>
 
 <script type = "text/template" id= "appView">
@@ -24,7 +22,7 @@ app.GlobalUser = <%= @current_user.id %>
 <script id="searchView" type="text/template">
   <textarea autofocus placeholder="Origin" id="origin"></textarea>
   <textarea autofocus placeholder="Destination" id="destination"></textarea>
-  <button>Search</button>
+  <button id='searchButton'>Search</button>
 </script>
 
 <script id="resultsView" type="text/template">
