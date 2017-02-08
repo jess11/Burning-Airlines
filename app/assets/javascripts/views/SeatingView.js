@@ -38,19 +38,11 @@ app.SeatingView = Backbone.View.extend({
     var seatsTaken = flightBookings.map(function(flight) {
       return flight.get('seat')
     });
-
-    // $('.plane .seat').each( function(p){
       _.each(seatsTaken,function(s){
-        // if (s === ){
-        $('div[id="'+ s + '"]').addClass('reserved')
-
-          // p.addClass('reserved');
-        // }
+        $('div[id="'+ s + '"]').addClass('taken')
       })
-
-    // })
-
   },
+
   selectSeat: function(event){
     // debugger;
     var $seatName = $(event.target).text();
