@@ -10,7 +10,7 @@ app.SeatingView = Backbone.View.extend({
 },
   render: function() {
 
-    this.$el.appendTo('#main');
+    this.$el.appendTo('.plane-container');
     console.log(this.model);
     var planeID = this.model.get('airplane_id');
     var plane = app.airplanes.where({id: planeID });
@@ -30,7 +30,7 @@ app.SeatingView = Backbone.View.extend({
         this.$el.append($seat)
       }
     }
-    var $button = $('<button id="save">Reserve</button>');
+    var $button = $('<button id="save" class="btn btn-warning">Reserve</button>');
     this.$el.append($button);
 
     var flightID= this.model.get('id');
