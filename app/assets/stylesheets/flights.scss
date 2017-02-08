@@ -1,3 +1,52 @@
 // Place all the styles related to the Flights controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// #main ?? don't think i'll mess with
+
+#search {
+  display: inline-block;
+  
+}
+
+#origin {
+
+}
+
+#destination {
+
+}
+
+#searchButton {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #ff9933;
+border: none;
+border-radius: 5px;
+box-shadow: 1px 5px #999;
+}
+
+#searchButton:hover {
+  background-color: orange;
+}
+
+#searchButton:active {
+  background-color: #ff8000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+div .reservations{
+
+}
+
+#reservations {
+
+}
