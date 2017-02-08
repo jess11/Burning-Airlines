@@ -8,27 +8,102 @@
 </head>
 <body>
 
-  <nav>
-    <%= link_to "Home", root_path %>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to '<span class="glyphicon glyphicon-home"></span>'.html_safe,
+ root_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <% if  @current_user.present? %>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @current_user.username %> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
 
-    <% if @current_user.present? %>
-      <%= link_to "Search", reservationhome_path%>
-      <% if @current_user.admin? %>
-        <%= link_to "All users", users_path %>
+            <li><%= link_to "Search", reservationhome_path%></li>
+
+            <% if @current_user.admin? %>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "All Users", users_path %></li>
+            <li><%= link_to "All Uploads", uploads_path %></li>
+
+            <% end %>
+
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Sign Out", login_path, :method => 'delete' %></li>
+          </ul>
+          <% else %>
+
+          <li><p class="navbar-text">Already have an account?</p></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+          <ul id="login-dp" class="dropdown-menu">
+          <li>
+             <div class="row">
+                <div class="col-md-12">
+                   <!--form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav"-->
+                   <%= form_tag login_path, :class => 'form', :id => 'login-nav' do %>
+                      <div class="form-group">
+                         <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                         <input type="text" name="username" class="form-control" id="exampleInputEmail2" placeholder="Username" required>
+                      </div>
+                      <div class="form-group">
+                         <label class="sr-only" for="exampleInputPassword2">Password</label>
+                         <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                      </div>
+                      <div class="form-group">
+                         <button type="submit" class="btn btn-default btn-block">Sign in</button>
+                      </div>
+                    <% end %>
+                </div>
+                <div class="bottom text-center">
+                  New here ? <%= link_to "Join Us", root_path %>
+                </div>
+             </div>
+          </li>
+          </ul>
+          </li>
+
+          <% end %>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <nav>
+      <%= link_to "Home", root_path %>
+
+      <% if @current_user.present? %>
+        <%= link_to "Search", reservationhome_path%>
+        <% if @current_user.admin? %>
+          <%= link_to "All users", users_path %>
+        <% end %>
+
+
+
+        <%= link_to "Logout #{@current_user.username}", login_path, :method => 'delete' %>
+      <% else %>
+        <%= link_to "Sign up", new_user_path %>
+        <%= link_to "Sign in", login_path %>
       <% end %>
 
+    </nav>
+<div class="container">
 
-
-      <%= link_to "Logout #{@current_user.username}", login_path, :method => 'delete' %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Sign in", login_path %>
-    <% end %>
-
-  </nav>
-
-
-<%= yield %>
-
+  <%= yield %>
+</div>
 </body>
 </html>

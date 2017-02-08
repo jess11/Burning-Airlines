@@ -1,5 +1,7 @@
 
+  <div id="main"></div>
 
+<<<<<<< HEAD
 <div id="main">
 
 </div>
@@ -7,47 +9,48 @@
 <div class="plane-container">
 
 </div>
+=======
+  <div class="reservations">
+    <ul id="reservations">
+>>>>>>> 798372a3d2f4b4b8614c4f5d3681f876534e3b4a
 
-<div class="reservations">
-  <ul id="reservations">
-
-  </ul>
-</div>
-
-<script type="text/javascript">
-app.GlobalUser = <%= @current_user.id %>
-</script>
-
-<script type = "text/template" id= "appView">
-  <h1>Search Flights</h1>
-  <div id="search">
+    </ul>
   </div>
-  <ul id="results"></ul>
 
-  <div id="plane_choice"></div>
-</script>
+  <script type="text/javascript">
+  app.GlobalUser = <%= @current_user.id %>
+  </script>
 
+  <script type = "text/template" id= "appView">
+    <h1>Search Flights</h1>
+    <div id="search">
+    </div>
+    <ul id="results"></ul>
 
-<script id="searchView" type="text/template">
-  <textarea autofocus placeholder="Origin" id="origin"></textarea>
-  <textarea autofocus placeholder="Destination" id="destination"></textarea>
-  <button id='searchButton'>Search</button>
-</script>
-
-
-<!-- <script id="reservationTemplate" type="text/template">
-  <li>{{ flight_no }}, {{ date }}, {{origin}} to {{destination}}, Seat: {{ seat }} </li>
-</script> -->
+    <div id="plane_choice"></div>
+  </script>
 
 
-<script id="resultsView" type="text/template">
+  <script id="searchView" type="text/template">
+    <textarea autofocus placeholder="Origin" id="origin"></textarea>
+    <textarea autofocus placeholder="Destination" id="destination"></textarea>
+    <button id='searchButton'>Search</button>
+  </script>
 
-</script>
 
-<script id="flight_name" type="text/template">
+  <!-- <script id="reservationTemplate" type="text/template">
+    <li>{{ flight_no }}, {{ date }}, {{origin}} to {{destination}}, Seat: {{ seat }} </li>
+  </script> -->
 
-</script>
 
-<script id="flight_image" type="text/template">
+  <script id="resultsView" type="text/template">
 
-</script>
+  </script>
+
+  <script id="flight_name" type="text/template">
+
+  </script>
+
+  <script id="flight_image" type="text/template">
+
+  </script>

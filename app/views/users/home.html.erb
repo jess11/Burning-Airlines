@@ -1,1 +1,17 @@
-<h1>home</h1>
+<h1>BURNING AIRLINES</h1>
+<div class="home_page">
+  <div class="row">
+    <div class="col-md-8">
+
+  <!-- <img src="/assets/flame_drawing.jpg" alt=""> -->
+
+
+    </div>
+    <div class="col-md-4">
+      <% if !  @current_user.present? %>
+        <%= render :partial => 'users/form' %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
