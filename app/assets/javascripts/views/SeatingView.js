@@ -19,11 +19,13 @@ app.SeatingView = Backbone.View.extend({
     // letters to set to seat
     var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     // looping rows & columns
+
     for (var x = 1; x <= rows; x++) {
       for (var y = 1; y <= columns; y++) {
-        var $seat = $('<div class="unselected"></div>');
-        $seat.addClass(x.toString() + letters[y-1]);
-
+        var seatName = x.toString() + letters[y-1]
+        var $seat = $('<div class="unselected">' + seatName + '</div>');
+        $seat.addClass(seatName);
+        $('#main').append($seat)
       }
     }
   }
