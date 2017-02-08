@@ -44,12 +44,20 @@ app.SeatingView = Backbone.View.extend({
   },
 
   selectSeat: function(event){
-    // debugger;
-    var $seatName = $(event.target).text();
-    console.log($seatName);
-    $(event.target).toggleClass('reserved')
+    // only allowing one seat to be selected per reservation
 
+    var planeID = this.model.get('id');
+    var alreadyBooked= app.bookings.where({user_id: app.GlobalUser, flight_id: planeID});
+    if (alreadyBooked.length === 0){
+      var $seat = $(event.target);
+      var reserved = $('.seat').hasClass('reserved')
+      if (!reserved || $seat.hasClass('reserved')){
+        $(event.target).toggleClass('reserved');
+      }
+    }
   },
+
+
   reserveSeat: function() {
     // debugger;
     var arrayOfselectedSeats = $('.plane .reserved')
