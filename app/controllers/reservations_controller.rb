@@ -30,7 +30,6 @@ class ReservationsController < ApplicationController
   # POST /reservations
   # POST /reservations.json
   def create
-    binding.pry
     @reservation = Reservation.new(reservation_params)
 
     respond_to do |format|

@@ -32,6 +32,23 @@ app.SeatingView = Backbone.View.extend({
     }
 
 
+    var flightID= this.model.get('id');
+    var flightBookings = app.bookings.where({flight_id: flightID});
+    var seatsTaken = flightBookings.map(function(flight) {
+      return flight.get('seat')
+    });
+
+    // $('.plane .seat').each( function(p){
+      _.each(seatsTaken,function(s){
+        // if (s === ){
+        $('div[id="'+ s + '"]').addClass('reserved')
+
+          // p.addClass('reserved');
+        // }
+      })
+
+    // })
+
   },
   selectSeat: function(event){
     // debugger;
@@ -41,14 +58,14 @@ app.SeatingView = Backbone.View.extend({
 
   },
   reserveSeat: function() {
-    debugger;
+    // debugger;
     var arrayOfselectedSeats = $('.plane .reserved')
     //underscore each array
     // grab the seat id (text,val)
     app.bookings.create({
-      user_id:
-      flight_id:
-      seat:
+      user_id: app.GlobalUser,
+      flight_id: this.model.get('id'),
+      seat: $('.plane .reserved').text()
     })
   },
 
