@@ -5,8 +5,8 @@ u2 = User.create :username => 'naynoms', :password => 'chicken', :password_confi
 u3 = User.create :username => 'LaaLaa23', :password => 'chicken', :password_confirmation => 'chicken'
 
 Airplane.destroy_all
-a1 = Airplane.create :name => 'big plane', :row => 32, :columns => 12
-a2 = Airplane.create :name => 'small plane', :row => 12, :columns => 2
+a1 = Airplane.create :name => 'big plane', :row => 12, :columns => 6
+a2 = Airplane.create :name => 'small plane', :row => 6, :columns => 6
 
 Flight.destroy_all
 f1 = Flight.create :flight_no => 'BA666', :date => DateTime.strptime('02/14/2017', '%m/%d/%Y'), :origin => 'Sydney', :destination => 'Hell'
