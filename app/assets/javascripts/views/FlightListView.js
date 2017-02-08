@@ -24,5 +24,8 @@ app.FlightListView = Backbone.View.extend({ //this is a page - index of posts
     var str = [flightno, date, trip, planeName].join(' | ');
     this.$el.text(str);
     this.$el.appendTo('#results');
+
+    //to show a plane?
+
   }
 });

@@ -18,6 +18,8 @@ app.FlightView = Backbone.View.extend({
     //append picture to #main
 
 
+
+
     // var flightName = app.
 
 
