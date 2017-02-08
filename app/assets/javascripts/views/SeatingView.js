@@ -10,7 +10,7 @@ app.SeatingView = Backbone.View.extend({
 },
   render: function() {
 
-    this.$el.appendTo('.plane-container');
+    this.$el.appendTo('#main');
     console.log(this.model);
     var planeID = this.model.get('airplane_id');
     var plane = app.airplanes.where({id: planeID });
