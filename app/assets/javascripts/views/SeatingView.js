@@ -29,6 +29,14 @@ app.SeatingView = Backbone.View.extend({
         this.$el.append($seat)
       }
     }
+
+
+  },
+  selectSeat: function(event){
+    // debugger;
+    var $seatName = $(event.target).text();
+    console.log($seatName);
+    $(event.target).css({'background-color':'red'})
   },
 
 
