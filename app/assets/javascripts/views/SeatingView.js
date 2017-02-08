@@ -36,7 +36,8 @@ app.SeatingView = Backbone.View.extend({
     // debugger;
     var $seatName = $(event.target).text();
     console.log($seatName);
-    $(event.target).css({'background-color':'red'})
+    $(event.target).addClass('reserved')
+    // $(event.target).css({'background-color':'red'})
   },
 
 
