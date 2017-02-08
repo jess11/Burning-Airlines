@@ -7,28 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+    <nav>
+      <%= link_to "Home", root_path %>
 
-  <nav>
-    <%= link_to "Home", root_path %>
+      <% if @current_user.present? %>
+        <%= link_to "Search", reservationhome_path%>
+        <% if @current_user.admin? %>
+          <%= link_to "All users", users_path %>
+        <% end %>
 
-    <% if @current_user.present? %>
-      <%= link_to "Search", reservationhome_path%>
-      <% if @current_user.admin? %>
-        <%= link_to "All users", users_path %>
+
+
+        <%= link_to "Logout #{@current_user.username}", login_path, :method => 'delete' %>
+      <% else %>
+        <%= link_to "Sign up", new_user_path %>
+        <%= link_to "Sign in", login_path %>
       <% end %>
 
+    </nav>
 
 
-      <%= link_to "Logout #{@current_user.username}", login_path, :method => 'delete' %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Sign in", login_path %>
-    <% end %>
-
-  </nav>
-
-
-<%= yield %>
-
+  <%= yield %>
+</div>
 </body>
 </html>
