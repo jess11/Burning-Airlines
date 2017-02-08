@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
 
   def home
-    
+
   end
 
   # GET /reservations
@@ -30,6 +30,7 @@ class ReservationsController < ApplicationController
   # POST /reservations
   # POST /reservations.json
   def create
+    binding.pry
     @reservation = Reservation.new(reservation_params)
 
     respond_to do |format|
