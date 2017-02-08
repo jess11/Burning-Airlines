@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
   app.appRouter = new app.AppRouter();
   //creating flights collection and collecting data
   app.flights = new app.Flights();
@@ -18,8 +20,8 @@ $(document).ready(function () {
 
 
   // polling
-  // setInterval(function() {
-  //   app.bookings.fetch();
-  // }, 5000);
+  setInterval(function() {
+    app.bookings.fetch();
+  }, 4000);
 
 });

@@ -2,6 +2,11 @@
 
 <div id="main"></div>
 
+<div class="reservations">
+  <ul id="reservations">
+
+  </ul>
+</div>
 
 <script type="text/javascript">
 app.GlobalUser = <%= @current_user.id %>
@@ -22,6 +27,12 @@ app.GlobalUser = <%= @current_user.id %>
   <textarea autofocus placeholder="Destination" id="destination"></textarea>
   <button id='searchButton'>Search</button>
 </script>
+
+
+<!-- <script id="reservationTemplate" type="text/template">
+  <li>{{ flight_no }}, {{ date }}, {{origin}} to {{destination}}, Seat: {{ seat }} </li>
+</script> -->
+
 
 <script id="resultsView" type="text/template">
 

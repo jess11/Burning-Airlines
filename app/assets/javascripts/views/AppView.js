@@ -11,7 +11,6 @@ app.AppView = Backbone.View.extend({
     var searchView = new app.SearchView();
     searchView.render();
 
-  
 
     //to render the other views - will go inside this function also
 
