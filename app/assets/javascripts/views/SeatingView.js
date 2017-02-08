@@ -2,10 +2,11 @@
 var app = app || {};
 
 app.SeatingView = Backbone.View.extend({
-  // tagName: 'div',
-//   events: {
-//   'click seatSelect': 'seatingPlan'
-// },
+  tagName: 'div',
+  className: 'plane',
+  events: {
+  'click .seat': 'selectSeat'
+},
   render: function() {
     this.$el.html('<p>Seating Works!</p>');
     this.$el.appendTo('#main');
@@ -23,12 +24,14 @@ app.SeatingView = Backbone.View.extend({
     for (var x = 1; x <= rows; x++) {
       for (var y = 1; y <= columns; y++) {
         var seatName = x.toString() + letters[y-1]
-        var $seat = $('<div class="unselected">' + seatName + '</div>');
+        var $seat = $('<div class="unselected seat" id=' +seatName + '>' + seatName + '</div>');
         $seat.addClass(seatName);
-        $('#main').append($seat)
+        this.$el.append($seat)
       }
     }
-  }
+  },
+
+
 
 });
 
