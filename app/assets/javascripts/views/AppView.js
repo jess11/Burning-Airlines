@@ -15,8 +15,10 @@ app.AppView = Backbone.View.extend({
 
     //to render the other views - will go inside this function also
 
+
     //NEEDS to be re-added once created
     // var reservationView = new app.ReservationView();
     // reservationView.render();
+
   },
 });
