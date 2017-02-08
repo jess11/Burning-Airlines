@@ -10,7 +10,7 @@ app.FlightListView = Backbone.View.extend({ //this is a page - index of posts
 
     var planeID = this.model.get('airplane_id');
     var findPlane = app.airplanes.where({ id: planeID });
-    var planeName = findPlane.get('name');
+    var planeName = findPlane[0].get('name');
     var str = [flightno, date, trip, planeName].join(' | ');
     this.$el.text(str);
     this.$el.appendTo('#results');
