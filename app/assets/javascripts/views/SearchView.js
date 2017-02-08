@@ -15,6 +15,7 @@ app.SearchView = Backbone.View.extend({
   searchFlights: function () {
 
     event.preventDefault();
+    $('#results').html('');
     var originSearch = $('#origin').val();
     var destinationSearch = $('#destination').val();
     var searches = app.flights.where({ origin: originSearch });

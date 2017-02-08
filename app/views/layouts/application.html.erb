@@ -12,6 +12,7 @@
     <%= link_to "Home", root_path %>
 
     <% if @current_user.present? %>
+      <%= link_to "Search", reservationhome_path%>
       <% if @current_user.admin? %>
         <%= link_to "All users", users_path %>
       <% end %>
