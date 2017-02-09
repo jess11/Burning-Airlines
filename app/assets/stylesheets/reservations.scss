@@ -60,14 +60,13 @@
   cursor:pointer;
 }
 
-
 #toolView{
  text-align: center;
 }
 
 #results:hover li {
   color: #ff8000;
-
+}
 
 .toolHeading{
   font-weight: bold;
@@ -78,4 +77,5 @@
   width: 100%;
   background-size: cover;
   background-position: bottom;
+  margin-top: -3em;
 }
