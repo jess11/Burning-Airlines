@@ -12,9 +12,10 @@ app.FlightView = Backbone.View.extend({
     var planeName = findPlane[0].get('name');
     var str = [flightno, date, trip, planeName].join(' | ');
     this.$el.text(str);
+    var $str = $('<p>').html("Flight: " + str);
 
     $('#main').html('');
-    $('#main').append(str);
+    $('#main').append($str);
     var view = new app.SeatingView({model: this.model});
     view.render();
     //append picture to #main
