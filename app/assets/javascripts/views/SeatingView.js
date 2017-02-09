@@ -65,7 +65,9 @@ app.SeatingView = Backbone.View.extend({
     var planeID = this.model.get('id');
     var alreadyBooked= app.bookings.where({user_id: app.GlobalUser, flight_id: planeID});
     var reserved = $('.seat').hasClass('reserved')
-    if (reserved){
+    if (alreadyBooked.length> 0){
+      alert("You already have a reservation.")
+    } else if (reserved){
       var arrayOfselectedSeats = $('.plane .reserved')
       app.bookings.create({
         user_id: app.GlobalUser,
@@ -73,9 +75,10 @@ app.SeatingView = Backbone.View.extend({
         seat: $('.plane .reserved').text()
       })
       var $success = $('<p>').html('You have reserved seat: ' + $('.plane .reserved').text() + '. <p>No refunds or exchanges. Please read the fine print.</p>');
-      this.$el.append($success);
-    } else if (alreadyBooked.length> 0){
-      alert("You already have a reservation.")
+
+      var $msg = $('<div>')
+      $msg.html($success);
+      this.$el.append($msg);
     } else {
       alert("Hurry, please pick a seat!!!!");
     }
