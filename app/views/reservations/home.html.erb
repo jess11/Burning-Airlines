@@ -6,6 +6,7 @@
 
     </ul>
   </div>
+<div id="toolView"></div>
 <div class="fire"></div>
 
   <script type="text/javascript">
@@ -33,6 +34,13 @@
     <li>{{ flight_no }}, {{ date }}, {{origin}} to {{destination}}, Seat: {{ seat }} </li>
   </script> -->
 
+  <script id="tools" type="text/template">
+    <p class= "toolHeading">Please choose a survival tool: </p>
+    <input type="checkbox" name= "parachute" id= "parachute"> <label for="parachute"> Parachute</label>
+    <input type="checkbox" name= "liferaft" id= "liferaft"> <label for="liferaft"> Life Raft</label>
+    <input type="checkbox" name= "wood" id= "wood"> <label for="wood"> Wood</label>
+    <input type="checkbox" name= "jetpack" id= "jetpack"> <label for="jetpack">Jet Pack</label>
+  </script>
 
   <script id="resultsView" type="text/template">
 

@@ -9,6 +9,8 @@ app.SeatingView = Backbone.View.extend({
   'click #save': 'reserveSeat'
 },
   render: function() {
+    var toolView = new app.ToolView();
+    toolView.render();
 
     this.$el.appendTo('#main');
     console.log(this.model);
