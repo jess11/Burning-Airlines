@@ -33,7 +33,7 @@
 
             <li><%= link_to "Search", reservationhome_path%></li>
 
-            
+
             <li role="separator" class="divider"></li>
             <li><%= link_to "Sign Out", login_path, :method => 'delete' %></li>
           </ul>
@@ -77,7 +77,7 @@
 </nav>
 
 
-    <nav>
+    <!-- <nav>
       <%= link_to "Home", root_path %>
 
       <% if @current_user.present? %>
@@ -94,7 +94,7 @@
         <%= link_to "Sign in", login_path %>
       <% end %>
 
-    </nav>
+    </nav> -->
 <div class="container">
 
   <%= yield %>

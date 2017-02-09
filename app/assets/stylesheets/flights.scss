@@ -7,44 +7,50 @@
 
 #search {
   display: inline-block;
-  
+
 }
 
 #origin {
+  display: inline-block;
+  width: 48%;
+  margin-top: 1em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px #999;
 
 }
 
 #destination {
+  display: inline-block;
+  width: 48%;
+  margin-top: 1em;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px #999;
 
 }
 
 #searchButton {
 display: inline-block;
+width: 98%;
 padding: 15px 25px;
 font-size: 24px;
 text-align: center;
-text-decoration: none;
-outline: none;
 color: #fff;
 background-color: #ff9933;
 border: none;
 border-radius: 5px;
-box-shadow: 1px 5px #999;
+box-shadow: 1px 3px #999;
 }
 
 #searchButton:hover {
-  background-color: orange;
+  background-color: #ff8000;
 }
 
 #searchButton:active {
   background-color: #ff8000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-
-div .reservations{
-
+  box-shadow: 2px 6px #666;
+  transform: translateY(2px);
 }
 
 #reservations {
