@@ -60,6 +60,8 @@
   cursor:pointer;
 }
 
+#results:hover li {
+  color: #ff8000;
 
 .fire{
   background-image: url(http://wallpaper-gallery.net/images/fire-pic/fire-pic-10.jpg);
@@ -68,5 +70,4 @@
   background-size: cover;
   background-position: bottom;
   margin-top: -3em;
-
 }
