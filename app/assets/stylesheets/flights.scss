@@ -7,14 +7,18 @@
 
 #search {
   display: inline-block;
-
+  border: 20px solid;
+  padding: 1em;
+  -webkit-border-image: url('../assets/flame_frame.png') 80 round;
+  border-image: url('../assets/flame_frame.png') 80 round;
 }
 
 #origin {
   display: inline-block;
   width: 48%;
   margin-top: 1em;
-  border: none;
+  border: 1px ridge;
+  border-color: #ff9933;
   border-radius: 5px;
   box-shadow: 1px 2px #999;
 
@@ -24,7 +28,8 @@
   display: inline-block;
   width: 48%;
   margin-top: 1em;
-  border: none;
+  border: 1px ridge;
+  border-color: #ff9933;
   border-radius: 5px;
   box-shadow: 1px 2px #999;
 
@@ -34,7 +39,7 @@
 display: inline-block;
 width: 98%;
 padding: 15px 25px;
-font-size: 24px;
+font-size: 20px;
 text-align: center;
 color: #fff;
 background-color: #ff9933;
