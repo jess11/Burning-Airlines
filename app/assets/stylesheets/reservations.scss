@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .seat{
   display: inline-block;
-  border: 1px solid black;
+  border: 3px solid black;
+  margin: 2px;
   width:50px;
 }
 
 .plane {
+  margin-top: 2em;
   width: 330px;
 }
 
