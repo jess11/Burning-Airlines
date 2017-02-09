@@ -3,15 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .seat{
   display: inline-block;
-  border: 1px solid black;
+  border: 3px solid black;
+  margin: 2px;
   width:50px;
 }
+
 .plane {
+  margin-top: 1em;
   width: 330px;
 }
 
 .reserved{
-  background-color:blue;
+  background-color:black;
   color: white;
 }
 
@@ -22,12 +25,19 @@
 #main{
   display: inline-block;
   width: 48%;
+  margin-top: 2em;
 
 }
 .reservations{
   display: inline-block;
     width: 40%;
-  vertical-align: top;
-    border: 1px solid #ccc;
+    vertical-align: top;
+  margin-top: 4em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+}
 
+.reservations h3{
+  color: red;
 }
