@@ -28,6 +28,11 @@
   margin-top: 2em;
 
 }
+
+#main p{
+  color: red;
+  font-weight: bold;
+}
 .reservations{
   display: inline-block;
     width: 40%;
@@ -40,4 +45,8 @@
 
 .reservations h3{
   color: red;
+}
+
+#results li {
+  cursor:pointer;
 }
