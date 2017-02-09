@@ -9,8 +9,15 @@
 }
 
 .plane {
-  margin-top: 1em;
+
   width: 330px;
+  text-align: center;
+  margin: 1em auto 0 auto;
+}
+
+.seat{
+    background-color: lightyellow;
+    cursor: pointer;
 }
 
 .reserved{
@@ -32,6 +39,7 @@
 #main p{
   color: red;
   font-weight: bold;
+  text-align: center;
 }
 .reservations{
   display: inline-block;
@@ -41,6 +49,7 @@
     border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #888888;
+    padding-bottom: 1em;
 }
 
 .reservations h3{
@@ -49,4 +58,15 @@
 
 #results li {
   cursor:pointer;
+}
+
+
+.fire{
+  background-image: url(http://wallpaper-gallery.net/images/fire-pic/fire-pic-10.jpg);
+  height: 360px;
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  margin-top: -3em;
+
 }
